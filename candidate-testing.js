@@ -35,6 +35,7 @@ if (candidateAnswer === correctAnswer){
 } else {
   console.log("Incorrect.");
 }
+//pushing for Part 1.
 
 
   let grade;  //TODO 3.2 use this variable to calculate the candidates score.
