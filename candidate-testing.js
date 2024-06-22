@@ -32,14 +32,26 @@ for (i=0; i < questions.length; i++){
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-for (i=0; i < questions.length; i++){
-  console.log(`Your Answer: ${candidateAnswers[i]} \nCorrect Answer: ${correctAnswers[i]}`)
+console.log(`Candidate Name: ${candidateName}`)
+  for (i=0; i < questions.length; i++){
+  console.log(`${i+1}) ${questions[i]} \nYour Answer: ${candidateAnswers[i]} \nCorrect Answer: ${correctAnswers[i]}`)
 }
 //pushing for Part 1.
+let candidateCorrect = 0
+for (i=0; i < correctAnswers.length; i++){
+  
+  if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase() ){
+    candidateCorrect = candidateCorrect + 1;
+  }
+}
 
-
-  let grade;  //TODO 3.2 use this variable to calculate the candidates score.
-
+  let grade = (candidateCorrect / questions.length) * 100;  //TODO 3.2 use this variable to calculate the candidates score.
+console.log(`>>> Overall Grade: ${grade}% (${candidateCorrect} out of ${correctAnswers.length} correct.) <<<`);
+if (grade < 80){
+  console.log('>>> Status: FAILED <<<');
+} else {
+  console.log('>>> Status: PASSED <<<');
+}
 
   return grade;
 }
