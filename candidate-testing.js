@@ -34,7 +34,7 @@ function gradeQuiz(candidateAnswers) {
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
 console.log(`Candidate Name: ${candidateName}`)
   for (i=0; i < questions.length; i++){
-  console.log(`${i+1}) ${questions[i]} \nYour Answer: ${candidateAnswers[i]} \nCorrect Answer: ${correctAnswers[i]}`)
+  console.log(`${i+1}) ${questions[i]} \nYour Answer: ${candidateAnswers[i]} \nCorrect Answer: ${correctAnswers[i]}\n`)
 }
 //pushing for Part 1.
 let candidateCorrect = 0
