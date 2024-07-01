@@ -32,7 +32,7 @@ for (i=0; i < questions.length; i++){
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-console.log(`Candidate Name: ${candidateName}`)
+console.log(`\nCandidate Name: ${candidateName}`)
   for (i=0; i < questions.length; i++){
   console.log(`${i+1}) ${questions[i]} \nYour Answer: ${candidateAnswers[i]} \nCorrect Answer: ${correctAnswers[i]}\n`)
 }
@@ -59,7 +59,7 @@ if (grade < 80){
 function runProgram() {
   askForName();
   // TODO 1.1c: Greet candidate using their name //
-   console.log("Hi there, " + candidateName + "!");
+   console.log(`\nHi there, ${candidateName}!`);
   askQuestion();
   gradeQuiz(this.candidateAnswers);
 }
